@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/input', 'controllercrud@input' );
+
+Route::post('/input', 'controllercrud@insert' );
+
+Route::get('/exception/index', 'ExceptionController@index');

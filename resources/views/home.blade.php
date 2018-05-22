@@ -1,0 +1,13 @@
+@extends('layouts.frame')
+@section('title')
+  Home
+@endsection
+@section('header')
+  Homepage
+@endsection
+@section('content')
+<h2>WELCOME!</h2>
+@endsection
+@section('namaview')
+  homeblade
+@endsection
