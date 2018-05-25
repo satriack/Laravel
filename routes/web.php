@@ -20,3 +20,5 @@ Route::get('/input', 'controllercrud@input' );
 Route::post('/input', 'controllercrud@insert' );
 
 Route::get('/exception/index', 'ExceptionController@index');
+
+Route::get('/read','controllercrud@read');

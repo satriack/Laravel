@@ -17,7 +17,7 @@ class controllercrud extends Controller
       $siswa = new siswa; //new objek harus sama dengan model filename
 
       //$objek->property = $request->property
-      //        field di DB          name di view
+      //    field di DB          name di view
       $siswa->name = $request->nama;
       $siswa->email = $request->email;
       $siswa->password = $request->password;
@@ -29,5 +29,13 @@ class controllercrud extends Controller
         {
             throw new \App\Exceptions\CustomException('email sudah digunakan');
         }
+    }
+
+    function read(){
+      $siswa = siswa::all();
+
+      return view('read')
+      ->with('siswa',$siswa)
+      ->with('num',1);
     }
 }
