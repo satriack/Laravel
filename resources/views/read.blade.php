@@ -6,6 +6,7 @@
 @section('content')
 <form action="/input" method="post">
   {{ csrf_field() }}
+  <a href="{{url('input')}}"> Tambah Data</a>
   <table border="1">
     <tr>
       <th>No.</th>

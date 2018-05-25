@@ -23,7 +23,7 @@ class controllercrud extends Controller
       $siswa->password = $request->password;
 
       $siswa->save(); //function save
-      return redirect('/input'); //arahkan ke controller input
+      return redirect('/read'); //arahkan ke controller input
 
       }catch(Exception $exception)
         {
