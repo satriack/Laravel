@@ -21,20 +21,16 @@
       <td>{{$data->email}}</td>
       <td>{{$data->password}}</td>
       <td>
-        <a href="#">EDIT</a>
+        <a href="edit/{{$data->id}}">EDIT</a>
 
       </td>
       <td><form action="/delete/{{$data->id}}" method="POST">
         {{ csrf_field() }}
-      <input type="submit" value="delete">
+      <input type="submit" value="Delete" name="delete">
+      <input type="hidden" value="DELETE" name="_method">
       </form></td>
     </tr>
     @endforeach
-    <tr>
-      <td colspan="5" style="text-align:right;">
-        <input type="submit" value="Submit">
-      </td>
-    </tr>
   </table>
 
 @endsection
